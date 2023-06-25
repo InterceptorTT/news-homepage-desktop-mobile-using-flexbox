@@ -1,0 +1,301 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: inter;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+img {
+    height: auto;
+}
+
+/* HEADER */
+#header{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 4rem 0.5rem 4rem;
+    #logo{
+
+    }
+
+    #hamburger{
+        display: flex;
+        flex-direction: row;
+        transform: rotate(90deg);
+        display: none;
+        span{
+            border: solid 3px black;
+            margin: 3px;
+            width: 50px;
+        };
+    }
+
+    #nav-bar{
+        ul{
+            display: flex;
+            a{
+                text-decoration: none;
+                padding: 1rem;
+                color: rgb(69, 69, 69);
+                font-family:inter;
+                font-size: 1rem;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+            }
+            a:hover{
+                color: coral;
+            }
+        }
+    }
+}
+/* HERO_SECTION */
+#hero-section{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    max-width: 100%;
+    display: flex;
+    #main{ 
+        max-width: 70%;
+        padding: 1rem;
+        img{
+            width: 100%;
+        }
+        #text{
+            display: flex;
+            max-width: 100%;
+            h1{
+                color: black;
+                font-family: inter;
+                font-weight: 900;
+                font-size: 2.5rem;
+                width: 50%;
+            }
+            div{
+                position: relative;
+                width: 50%;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                p{
+                    position: absolute;
+                    top: 0.5rem;
+                    left: 0;
+                    color: rgb(71, 71, 71);  
+                    font-size: 0.85rem;
+                    font-weight: 100;
+                    margin-top: 0.5rem;
+                }
+                button{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: black;
+                    color: white;
+                    font-family: inter;
+                    text-transform: uppercase;
+                    padding: 0.75rem;
+                    letter-spacing: 5px;
+                    font-size: 0.75rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                }
+                button:hover{
+                    background: coral;
+                    border: solid 1px coral;
+                }
+            }
+        }
+    }
+    #side{
+        margin: 1rem;
+        background: black;
+        color: white;
+        font-family: inter;
+        padding: 1.25rem;
+
+        h2{
+            color: coral;
+            padding: 1rem;
+        }
+        > div{
+            padding: 1rem;
+            h4{
+                color: white;
+            }
+            p{
+                color: grey;
+            }
+        }
+    }
+}
+
+/* CARD SECTION */
+
+#card-section{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 4rem 0 4rem;
+    padding: 1rem;
+    a{
+        text-decoration: none;
+        .card{
+            display: flex;
+        img{
+            height: 5rem;
+            width: 5rem;
+        }
+        .card-text{
+            margin-left: 0.5rem;
+            #number{
+                font-size: 1.5rem;
+                color: rgba(147, 147, 147, 0.515);
+            }
+            h5{
+                color: black;
+                font-weight: 600;
+                font-size: 0.85rem;
+                font-family: inter;
+            }
+            p{
+                font-family: inter;
+                color: grey;
+                font-size: 0.75rem;
+
+            }
+        }
+    }
+}
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    #header{
+        #hamburger{
+            display: block;
+        }
+        #nav-bar{
+            display: none;
+        }
+    }
+
+    #hero-section{
+        flex-wrap: wrap;
+        max-width: 100%;
+        #main{
+            max-width: 100%;
+            #text{
+                flex-wrap: wrap;
+                margin-bottom: 1rem;
+                h1{
+                    width: 100%;
+                    font-size: 3.5rem;
+                }
+                div {
+                    width: 100%;
+                    height: 10rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+
+                    p {
+                        color: rgb(71, 71, 71);
+                        font-size: 1.25rem;
+                        font-weight: 100;
+                        margin-top: 0.5rem;
+                    }
+
+                    button {
+                        background: coral;
+                        color: white;
+                        font-family: inter;
+                        text-transform: uppercase;
+                        padding: 0.75rem;
+                        letter-spacing: 5px;
+                        font-size: 0.75rem;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    button:hover {
+                        background: black;
+                        border: solid 1px coral;
+                    }
+                }
+            }
+        }
+        #side{
+            margin-top: 2rem;
+        }
+    }
+
+    #card-section{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+
+        a{
+            max-width: 100%;
+            .card{
+                align-items: center;
+                margin: 0 auto;    
+                margin-bottom: 1rem;
+                img{
+                    height: 10rem;
+                    width: 10rem;
+                }
+                .card-text {
+                    margin-left: 0.5rem;
+
+                    #number {
+                        font-size: 3rem;
+                        color: rgba(147, 147, 147, 0.515);
+                    }
+
+                    h5 {
+                        color: black;
+                        font-size: 2.35rem;
+                        font-weight: 900;
+                        font-family: inter;
+                    }
+
+                    p {
+                        font-family: inter;
+                        color: grey;
+                        font-size: 1.5rem;
+
+                    }
+                }
+            }
+        }
+    }
+}
